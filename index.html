@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Landing Page | Startup App</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="shortcut icon" href="./public/img/figmalogo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="w-full h-auto xl:h-screen">
+        <div id="myOverlay" class="overlay w-full h-screen hidden fixed z-10 top-0 left-0 bg-black/[.7]">
+            <span class="closebtn absolute top-5 right-5 text-3xl cursor-pointer text-white" onclick="closeSearch()" title="Close Overlay"><i class="bi bi-x-circle"></i></span>
+            <div class="overlay-content px-6 md:px-0 relative translate-y-4 md:translate-y-0 top-16">
+              <form action="" class="flex justify-center">
+                <input type="text" class="md:w-[30rem] w-full h-11 rounded-l-full inline-block pl-5" placeholder="Type keywords..." name="search">
+                <button type="submit" class="flex bg-emerald-300 hover:bg-emerald-400 h-11 w-14 rounded-r-full text-2xl text-white justify-center items-center"><i class="bi bi-box-arrow-in-up-right font-medium"></i></button>
+              </form>
+            </div>
+        </div>
+        <div class="flex text-[#1E0E62] py-6 px-6 md:py-16 md:px-16 lg:px-28 justify-between">
+            <p class="font-bold text-2xl">
+                Startup 3
+            </p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="px-5 font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Home</a></li>
+                <li><a href="#" class="px-5 font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Features</a></li>
+                <li><a href="#" class="px-5 font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hidden lg:inline-flex hover:underline-offset-4">Blog</a></li>
+                <li><a href="#" class="px-5 font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Shop</a></li>
+                <li><a href="#" id="showSearch" onclick="showSearch()" class="px-5 font-medium text-gray-400">
+                    <i class="bi bi-search"></i>
+                </a></li>
+            </ul>
+            <div class="hidden md:block">
+                <button class="rounded-full px-5 py-2 transition-colors bg-transparent text-gray-400 font-medium hover:bg-emerald-300 hover:text-white">Sign in</button>
+                <button class="rounded-full px-5 py-2 transition-colors bg-emerald-300 text-white hover:outline-2 hover:outline hover:outline-emerald-300 hover:bg-transparent hover:text-emerald-300">Sign up</button>
+            </div>
+            <div class="md:hidden">
+                <a href="#" id="showSearch" onclick="showSearch()" class="px-5 inline-block align-super font-medium text-gray-400">
+                    <i class="bi bi-search"></i>
+                </a>
+                <button onclick="showResposiveMenu()" class="text-2xl hover:bg-gray-50 border-2 w-10 border-gray-300 border-solid rounded-md">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="hidden bg-white pb-5 w-full top-20 left-0 md:hidden" id="responsiveMenu">
+                    <ul class="px-6">
+                        <li class="mb-3"><a href="#" class="font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Home</a></li>
+                        <li class="mb-3"><a href="#" class="font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Features</a></li>
+                        <li class="mb-3"><a href="#" class="hidden lg:inline-flex font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Blog</a></li>
+                        <li class="mb-3"><a href="#" class="font-medium text-gray-400 hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Shop</a></li>
+                        <li>
+                            <button class="rounded-md mb-3 w-full px-5 py-2 transition-colors bg-transparent text-gray-400 font-medium hover:bg-emerald-300 hover:text-white">Sign in</button>
+                        </li>
+                        <li>
+                            <button class="rounded-md w-full px-5 py-2 transition-colors bg-emerald-300 text-white hover:outline-2 hover:outline hover:outline-emerald-300 hover:bg-transparent hover:text-emerald-300">Sign up</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-14">
+            <p class="font-bold mb-9 text-[#1E0E62] text-3xl md:text-5xl lg:text-7xl tracking-tight">
+                Startup Framework
+            </p>
+            <p class="text-gray-400 w-full md:w-[34rem] mx-auto md:mb-20 mb-40 px-6 md:px-0 font-medium text-xl">
+                We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!   
+            </p>
+            <div class="flex items-center flex-col">
+                <button class="bg-emerald-300 mb-5 rounded-full text-white font-medium text-xl px-5 py-2 hover:bg-transparent hover:text-emerald-300 border-2 border-solid transition-colors border-emerald-300">Purchase Now for $248</button>
+                <button class="text-emerald-300 hover:bg-emerald-300 hover:text-white font-medium text-xl rounded-full px-[4.7rem] py-2 bg-transparent transition-colors">Learn More</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#2F1893] w-full h-auto xl:h-screen">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 lg:px-28 justify-between text-white">
+            <p class="font-bold text-2xl">
+                Startup 3
+            </p>
+            <div class="text-white hidden sm:block">
+                <a href="#" class="font-medium hover:underline underline-offset-4 px-5">Suscribe</a>
+                <a href="#" class="font-medium hover:underline underline-offset-4 px-5">Features</a>
+                <button class="rounded-full px-5 py-2 bg-indigo-500 hover:bg-indigo-600">Sign Up</button>
+            </div>
+            <button type="button" class="border-2 border-white/[.5] w-10 rounded-md text-2xl hover:bg-white/[.2] sm:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="text-center py-14 px-6 sm:px-20 md:px-32 lg:px-60 xl:px-96 text-white">
+            <p class="font-bold mb-9 px-10 text-3xl md:text-5xl lg:text-7xl tracking-tight">
+                Let's make design fast and easy
+            </p>
+            <p class="md:mb-20 mb-28 md:px-20 font-medium text-xl">
+                The most important part of the  Startup is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks from UI kit
+            </p>
+            <div class="flex items-center mb-5 justify-center text-white">
+                <input type="text" class="sm:w-64 w-44 px-5 h-11 mr-5 bg-transparent rounded-full border-2 border-white/[.5] border-solid" placeholder="Your email">
+                <button class="bg-[#25DAC5] hover:bg-emerald-300 font-medium text-xl rounded-full px-5 py-2 bg-transparent transition-colors">Send</button>
+            </div>
+            <p class="text-white/[.3]">
+                By signing up you agree to the terms of service
+            </p>
+        </div>
+    </div>
+    <div class="w-full h-auto xl:h-screen">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <div class="flex text-[#1E0E62]">
+                <p class="font-bold text-2xl">
+                Startup 3
+                </p>
+                <ul class="md:flex hidden items-center">
+                    <li><a href="#" class="pr-5 pl-11 text-gray-400 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Products <i class="bi bi-chevron-down"></i></a></li>
+                    <li><a href="#" class="px-2 lg:px-5 text-gray-400 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Pricing</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 text-gray-400 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Community</a></li>
+                </ul>
+            </div>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="text-gray-400 px-2 lg:px-5 font-medium  hover:underline hover:decoration-emerald-300 hover:underline-offset-4">API</a></li>
+                <li><a href="#" class="text-gray-400 px-2 lg:px-5 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Help</a></li>
+                <li><a href="#" class="text-gray-400 px-2 lg:px-5 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Login</a></li>
+                <li><button class="rounded-full px-2 lg:px-5 py-2 bg-emerald-300 text-white font-medium hover:bg-emerald-400">Sign Up</button></li>
+            </ul>
+            <button type="button" class="border-2 border-emerald-300 w-10 rounded-md text-2xl hover:bg-white/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="xl:px-28 md:px-20 sm:px-14 px-8 md:py-16 sm:py-14 py-8 flex-wrap flex justify-between">
+            <div class="flex flex-col">
+                <h3 class="font-bold w-full md:w-[35rem] mb-20 text-2xl md:text-4xl text-[#1E0E62]">A high-quality solutione for those who want a beatiful startup website quickly</h3>
+                <input type="email" required autocomplete="email" placeholder="Your email" class="w-full sm:w-96 h-11 px-5 rounded-full border-2 border-black/[.2] mb-9 border-solid">
+                <input type="password" required placeholder="Your password" class="sm:w-96 w-full h-11 px-5 rounded-full mb-9 border-2 border-black/[.2] border-solid">
+                <button type="submit" class="sm:w-96 w-full h-11 bg-emerald-300 hover:bg-emerald-400 text-white font-medium rounded-full mb-9">Sign Up</button>
+                <p class="text-gray-400/[.3] font-medium ml-5">By signing up, you agree to the terms of service</p>
+            </div>
+            <div class="w-full sm:w-auto mt-10 sm:mt-0">
+                <div class="bg-center bg-no-repeat flex justify-center items-center mb-9 h-64 rounded-xl bg-cover w-full sm:w-[30rem]" style="background-image: url(./public/img/mask1.png);">
+                    <div class="w-14 h-14 bg-orange-600 cursor-pointer rounded-full text-white text-3xl flex justify-center items-center"><i class="bi bi-caret-right-fill"></i></div>
+                </div>
+                <p class="font-medium text-gray-400 w-full sm:w-80">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection!</p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 lg:px-28 justify-between">
+            <div class="flex text-[#1E0E62] items-center">
+                <p class="font-bold text-2xl">
+                    Startup 3
+                </p>
+                <ul class="md:flex hidden text-gray-400">
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline decoration-violet-800 hover:underline-offset-4">Features</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline decoration-violet-800 hover:underline-offset-4">Downloads</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline decoration-violet-800 hover:underline-offset-4">Docs</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline decoration-violet-800 hover:underline-offset-4">Support</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline decoration-violet-800 hover:underline-offset-4">Blog</a></li>
+                </ul>
+            </div>
+            <div class="hidden md:block text-gray-400">
+                <i class="bi px-2 lg:px-5 hover:text-violet-900 bi-twitter"></i>
+                <i class="bi px-2 lg:px-5 hover:text-violet-900 bi-facebook"></i>
+                <i class="bi px-2 lg:px-5 hover:text-violet-900 bi-google"></i>
+            </div>
+            <button type="button" class="border-2 border-orange-300 w-10 rounded-md text-2xl hover:bg-white/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="flex flex-col text-center items-center lg:px-52 sm:px-28 md:px-36 py-6 px-6 xl:px-80">
+            <p class="font-bold text-3xl md:text-5xl lg:text-7xl mb-9 text-[#1E0E62]">
+                Simple and beatiful ready for use blocks 
+            </p>
+            <div class="bg-center h-96 bg-cover bg-no-repeat w-full flex justify-center items-center rounded-md" style="background-image: url(./public/img/Image.png);">
+                <div class="w-14 h-14 bg-orange-600 cursor-pointer rounded-full text-white text-3xl flex justify-center items-center"><i class="bi bi-caret-right-fill"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <p class="font-bold text-2xl">
+                Startup 3
+            </p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-violet-800 hover:underline-offset-4 text-[#1E0E62]">Portfolio</a></li>
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-violet-800 hover:underline-offset-4 text-[#1E0E62]">How it Works</a></li>
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-violet-800 hover:underline-offset-4 text-[#1E0E62]">Pricing</a></li>
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-violet-800 hover:underline-offset-4 text-[#1E0E62]">About</a></li>
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-violet-800 hover:underline-offset-4 text-[#1E0E62]">Login</a></li>
+                <li>
+                    <button class="text-[#1E0E62] border-2 border-gray-300/[.5] border-solid px-5 py-2 rounded-full hover:bg-[#1E0E62] hover:text-white font-medium ">Sign in</button>
+                </li>
+            </ul>
+            <button type="button" class="border-2 border-[#25DAC5] w-10 rounded-md text-2xl hover:bg-white/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="text-[#1E0E62] lg:px-40 sm:px-28 md:px-36 py-6 px-6 text-center py-12">
+            <p class="font-bold lg:text-5xl md:text-4xl text-3xl mb-12 xl:text-7xl">A high-quality solution startup website quickly</p>
+            <button type="button" class="px-6 py-4 text-white font-medium hover:bg-[#1ecbb7] bg-[#25DAC5] mb-14 rounded-full text-xl">Get started</button>
+            <figure class="mb-12 md:px-14">
+                <img src="./public/img/macbook.png" loading=lazy draggable="false" alt="Macbook">
+            </figure>
+            <div class="grid lg:divide-x-2 divide-y-2 lg:divide-y-0 grid-cols-1 lg:grid-cols-3">
+                <div class="md:pr-6 pb-5 md:pb-0">
+                    <p class="font-medium text-lg text-gray-400">Startup Framework works on devices supporting Retina Display. Feel the clarity in each pixel. </p>
+                </div>
+                <div class="md:px-6 py-5 md:py-0">
+                    <p class="font-medium text-lg text-gray-400">There are a lot of different components that will help you create the perfect look and feel for your startup.</p>
+                </div>
+                <div class="md:pl-6 pt-5 md:pt-0">
+                    <p class="font-medium text-lg text-gray-400">You can easly combine components in a variety ways for different design project it's easy</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+<!--     linear-gradient(rgba(0, 102, 255, 0.227),rgba(0, 149, 255, 0.227)) ,
+ --><div class="w-full h-screen bg-center bg-blend-soft-light bg-cover opacity-70" style="background-image: linear-gradient(#2F1893,#2F1893), url(./public/img/header6.png);">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <ul class="md:flex hidden text-white">
+                <li><Products href="#" class="font-medium px-2 sm:px-5 cursor-pointer hover:underline decoration-emerald-300 hover:underline-offset-4">Products</a></li>
+                <li><Pricing href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-emerald-300 hover:underline-offset-4">Pricing</a></li>
+                <li><Community href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-emerald-300 hover:underline-offset-4">Community</a></li>
+            </ul>
+            <p class="font-bold text-white text-2xl">
+                Startup 3
+            </p>
+            <ul class="md:flex hidden">
+                <li><button type="button" class="font-medium bg-transparent px-2 sm:px-5 py-2 rounded-full hover:bg-[#25DAC5] mr-5 text-white">Login</button></li>
+                <li><button type="button" class="hover:bg-[#1ecbb7] font-medium bg-[#25DAC5] rounded-full text-white sm:px-5 px-2 py-2">Sign Up</button></li>
+            </ul>
+            <button type="button" class="border-2 border-gray-300 w-10 rounded-md text-2xl hover:bg-white/[.8] bg-white/[.6] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="lg:px-40 xl:px-60 sm:px-28 md:px-36 py-6 px-6 text-center text-white">
+            <p class="font-bold lg:text-5xl md:text-4xl text-3xl xl:text-7xl">A high-quality solution for those who want a beautiful startup website quickly</p>
+            <span class="mx-auto my-24 w-14 h-14 bg-orange-600 cursor-pointer rounded-full text-white text-3xl flex justify-center items-center"><i class="bi bi-caret-right-fill"></i></span>
+            <p class="font-medium text-lg xl:px-60 lg:px-52 md:px-32 sm:px-20 px-6">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection! </p>
+        </div>
+    </div>
+    <div class="w-full flex items-start h-screen">
+        <div class="flex-auto">
+            <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-between">
+                <p class="font-bold text-2xl">
+                    Startup 3
+                </p>
+                <ul class="flex">
+                    <li><a href="#" class="font-medium sm:mx-4 px-2 py-2 rounded-lg hover:bg-gray-200">Pricing</a></li>
+                    <li><a href="#" class="font-medium sm:mx-4 px-2 py-2 rounded-lg hover:bg-gray-200">About</a></li>
+                </ul>
+            </div>
+            <div class="xl:pl-28 lg:pl-16 md:py-12 pl-6 xl:pr-60 md:pr-26 pr-6 sm:pr-16 py-16">
+                <div>
+                    <p class="text-[#1E0E62] font-bold lg:text-6xl mb-9 md:text-4xl text-3xl">Great tool to boost your startup</p>
+                    <p class="text-gray-300 mb-20 w-full sm:w-[28rem] font-medium text-lg">We made it so beutiful and simple. It combines landings, pages, blogs and shop screens. It is definitely the tool you need in your collection</p>
+                </div>
+                <div class="mb-9">
+                    <div class="mb-9">
+                        <button class="bg-[#25DAC5] mr-5 hover:bg-[#1ecbb7] font-medium text-lg px-6 py-3 text-white rounded-full ">Get started</button>
+                        <button class="font-medium text-lg rounded-full px-6 py-3 bg-transparent text-[#1E0E62] hover:bg-[#1E0E62] hover:text-white hover:border-[#1E0E62] transition-colors border-2 border-solid border-gray-300/[.5] ">Learn More</button>
+                    </div>
+                    <p class="text-gray-400 font-medium">By signing up, you agree to the Terms of Service</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-center hidden lg:block bg-cover bg-no-repeat w-[36rem] h-full" style="background-image: url(./public/img/header7.png);"></div>
+    </div>
+    <div class="w-full h-auto md:h-screen">
+        <div class="bg-center relative bg-cover bg-no-repeat w-full mySlides h-full" style="background-image: linear-gradient(rgba(0, 102, 255, 0.227),rgba(0, 149, 255, 0.227)), url(./public/img/mountain1.webp);">
+            <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-center">
+                <ul class="sm:flex hidden text-white items-center">
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Home</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Features</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Pricing</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Blog</a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-lg py-2 bi-globe2"></i></a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-2xl py-2 bi-behance"></i></a></li>
+                </ul>
+            </div>
+            <div class="w-full px-20 py-12 lg:py-16 lg:px-52 items-center xl:px-96 flex flex-col items-center justify-between h-3/4 text-white text-center">
+                <div class="text-white">
+                    <p class="font-bold mb-9 text-2xl">
+                        Startup 3
+                    </p>
+                    <h3 class="font-bold lg:text-5xl md:text-4xl text-3xl mb-9 xl:text-7xl">Forget About Code</h3>
+                    <p class="font-medium md:px-4 text-xl md:text-2xl">Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding. </p>
+                </div>
+                <button class="px-5 py-3 bg-indigo-500 rounded-full hover:bg-indigo-600 mt-10 font-medium">Create an Account</button>
+            </div>
+            <a class="prev w-14 hover:bg-black/[.2] h-14 rounded-full hidden text-center text-5xl text-white absolute left-5 cursor-pointer top-2/4" onclick="plusSlides(-1)">❮</a>
+            <a class="next w-14 hover:bg-black/[.2] h-14 rounded-full hidden text-center text-5xl text-white top-2/4 absolute right-5 cursor-pointer" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div class="bg-center relative bg-cover bg-no-repeat w-full mySlides h-full" style="background-image: linear-gradient(rgba(0, 102, 255, 0.227),rgba(0, 149, 255, 0.227)), url(./public/img/mountain2.jpg);">
+            <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-center">
+                <ul class="sm:flex hidden text-white items-center">
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Home</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Features</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Pricing</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Blog</a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-lg py-2 bi-globe2"></i></a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-2xl py-2 bi-behance"></i></a></li>
+                </ul>
+            </div>
+            <div class="w-full px-20 py-12 lg:py-16 lg:px-52 items-center xl:px-96 flex flex-col items-center justify-between h-3/4 text-white text-center">
+                <div class="text-white">
+                    <p class="font-bold mb-9 text-2xl">
+                        Startup 3
+                    </p>
+                    <h3 class="font-bold lg:text-5xl md:text-4xl text-3xl mb-9 xl:text-7xl">Forget About Code</h3>
+                    <p class="font-medium md:px-4 text-xl md:text-2xl">Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding. </p>
+                </div>
+                <button class="px-5 py-3 bg-indigo-500 rounded-full hover:bg-indigo-600 mt-10 font-medium">Create an Account</button>
+            </div>
+            <a class="prev hidden w-14 hover:bg-black/[.2] h-14 rounded-full text-center text-5xl text-white absolute left-5 cursor-pointer top-2/4" onclick="plusSlides(-1)">❮</a>
+            <a class="next hidden w-14 hover:bg-black/[.2] h-14 rounded-full text-center text-5xl text-white top-2/4 absolute right-5 cursor-pointer" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div class="bg-center relative bg-cover bg-no-repeat w-full mySlides h-full" style="background-image: url(./public/img/mountain3.jpeg);">
+            <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-center">
+                <ul class="sm:flex hidden text-black items-center">
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-black/[.2] rounded-md py-2">Home</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-black/[.2] rounded-md py-2">Features</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-black/[.2] rounded-md py-2">Pricing</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-black/[.2] rounded-md py-2">Blog</a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-lg py-2 bi-globe2"></i></a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-2xl py-2 bi-behance"></i></a></li>
+                </ul>
+            </div>
+            <div class="w-full px-20 py-12 lg:py-16 lg:px-52 items-center xl:px-96 flex flex-col items-center justify-between h-3/4 text-white text-center">
+                <div class="text-black/[.7]">
+                    <p class="font-bold mb-9 text-2xl">
+                        Startup 3
+                    </p>
+                    <h3 class="font-bold lg:text-5xl md:text-4xl text-3xl mb-9 xl:text-7xl">Forget About Code</h3>
+                    <p class="font-medium md:px-4 text-xl md:text-2xl">Startup Framework gives you complete freedom over your creative process — you don’t have to think about any technical aspects. There are no limits and absolutely no coding. </p>
+                </div>
+                <button class="px-5 py-3 bg-indigo-500 rounded-full hover:bg-indigo-600 mt-10 font-medium">Create an Account</button>
+            </div>
+            <a class="prev hidden w-14 hover:bg-black/[.2] h-14 rounded-full text-center text-5xl text-black/[.5] hover:text-white absolute left-5 cursor-pointer top-2/4" onclick="plusSlides(-1)">❮</a>
+            <a class="next hidden w-14 hover:bg-black/[.2] h-14 rounded-full text-center text-5xl text-black/[.5] hover:text-white top-2/4 absolute right-5 cursor-pointer" onclick="plusSlides(1)">❯</a>
+        </div>
+    </div>
+    <div class="w-full h-auto xl:h-screen">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <p class="font-bold text-2xl">
+            Startup 3
+            </p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="text-gray-400 px-2 lg:px-5 font-medium">Overview</a></li>
+                <li><a href="#" class="text-[#1E0E62] px-2 lg:px-5 font-medium hover:underline hover:decoration-indigo-500 hover:underline-offset-4">Features</a></li>
+                <li><a href="#" class="text-[#1E0E62] px-2 lg:px-5 font-medium hover:underline hover:decoration-indigo-500 hover:underline-offset-4">Company</a></li>
+                <li><a href="#" class="text-[#1E0E62] px-2 lg:px-5 font-medium hover:underline hover:decoration-indigo-500 hover:underline-offset-4">Platform</a></li>
+                <li><a href="#" class="text-[#1E0E62] px-2 lg:pl-5 lg:pr-8 font-medium hover:underline hover:decoration-indigo-500 hover:underline-offset-4">Company</a></li>
+                <li><button class="rounded-full px-2 lg:px-5 py-2 border-2 border-solid border-gray-300 hover:border-indigo-500 hover:text-white bg-transparent text-[#1E0E62] font-medium hover:bg-indigo-500">Sign Up</button></li>
+            </ul>
+            <button type="button" class="border-2 border-indigo-500 w-10 rounded-md text-2xl hover:bg-white/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="xl:px-28 md:px-20 sm:px-14 itm px-8 md:py-16 sm:py-14 py-8 grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 justify-items-center">
+            <div class="flex justify-around items-start flex-col">
+                <div>
+                    <h3 class="font-bold w-full md:w-[35rem] mb-9 text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#1E0E62]">You have the design, you have the code</h3>
+                    <p class="text-gray-300 font-medium text-lg sm:pr-30 pr-0 md:pr-60">We made it so beautiful and simple. It combines Landings, pages, blogs and shop screen. It is definitely the tool you need in your collection</p>
+                </div>
+                <button type="submit" class="h-11 px-5 bg-indigo-500 hover:bg-indigo-600 text-white font-medium rounded-full">Explore Design</button>
+            </div>
+            <div class="w-full sm:w-auto mt-10 sm:mt-0">
+                <div class="bg-center bg-no-repeat flex justify-center items-center h-96 rounded-3xl bg-cover w-full sm:w-96" style="background-image: url(./public/img/header9.png);">
+                    <figure>
+                        <img src="./public/img/Oval 151.png" loading=lazy alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#2F1893] w-full h-auto">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <div class="flex items-center">
+                <p class="font-bold text-white text-2xl">
+                    Startup 3
+                </p>
+                <ul class="md:flex hidden text-white items-center">
+                    <li><a href="#" class="px-2 lg:px-5 font-medium"></a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline hover:decoration-white hover:underline-offset-4">Features</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline hover:decoration-white hover:underline-offset-4">Company</a></li>
+                    <li><a href="#" class="px-2 lg:px-5 font-medium hover:underline hover:decoration-white hover:underline-offset-4">Platform</a></li>
+                    <li><a href="#" class="px-2 lg:pl-5 lg:pr-8 font-medium hover:underline hover:decoration-white hover:underline-offset-4">Company</a></li>
+                </ul>
+            </div>
+            <ul class="md:flex hidden items-center text-white">
+                <li><a href="#" class="font-medium px-2 hover:underline hover:decoration-white hover:underline-offset-4 sm:px-5">Help</a>
+                </li>
+                <li><a href="#" class="font-medium px-2 hover:underline hover:decoration-white hover:underline-offset-4 sm:px-5">Login</a></li>
+                <li><button class="px-2 py-2 hover:bg-white hover:text-[#1E0E62] font-medium bg-transparent border-2 border-white/[.5] border-solid rounded-full sm:px-5 ">Sign Up</button></li>
+            </ul>
+            <button type="button" class="border-2 border-white/[.7] text-white w-10 rounded-md text-2xl hover:bg-white/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="md:text-center xl:px-80 lg:px-60 md:px-40 sm:px-20 px-14 py-16 text-white">
+            <h2 class="font-bold mb-9 text-2xl md:text-4xl lg:text-5xl xl:text-6xl">A high-quality solution for those who want a beautiful startup website quickly</h2>
+            <p class="font-medium md:px-20 px-0 text-xl md:text-2xl">Startup contains components and complex blocks which can easily be integrated into almost any design.</p>
+            <button class="rounded-full mx-auto block my-24 text-xl bg-[#25DAC5] font-medium hover:bg-[#1ecbb7] px-5 py-3 ">Get Started for Free</button>
+            <div class="flex flex-wrap gap-7 xl:gap-0 md:justify-around">
+                <div class="flex flex-col grow md:grow-0 items-center  md:flex-row">
+                    <div class="bg-center  md:mr-5 bg-cover rounded-xl flex justify-center items-center bg-no-repeat w-44 h-28" style="background-image: url(./public/img/pencillip.png);"></div>
+                    <p class="text-white/[.7] md:text-left font-medium md:w-44 w-full text-center text-lg">A high-quality solution for a beautiful startup website</p>
+                </div>
+                <div class="flex flex-col grow md:grow-0 items-center md:items-start md:flex-row">
+                    <div class="bg-center flex-auto md:mr-5 bg-cover rounded-xl flex justify-center items-center bg-no-repeat w-44 h-28" style="background-image: url(./public/img/iphonebg.png);"></div>
+                    <p class="text-white/[.7] md:text-left text-center font-medium md:w-44 w-full text-lg">Learn more about Startup Framework in demo version</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <p class="font-bold text-2xl">
+            Startup 3
+            </p>
+            <ul class="sm:flex hidden items-center">
+                <li><a href="#" class="text-gray-400 px-5 font-medium">About</a></li>
+                <li><a href="#" class="text-[#1E0E62] px-5 font-medium hover:underline hover:decoration-indigo-500 hover:underline-offset-4">Features</a></li>
+                <li><a href="#" class="text-[#1E0E62] px-5 font-medium hover:underline hover:decoration-indigo-500 hover:underline-offset-4">Contacts</a></li>
+                <li><button class="rounded-full px-5 py-2 border-2 border-solid border-transparent hover:border-indigo-500 hover:bg-indigo-600 bg-indigo-500 text-white font-medium">Buy</button></li>
+            </ul>
+            <button type="button" class="border-2 border-indigo-500 w-10 rounded-md text-2xl hover:bg-white/[.2] sm:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="xl:px-28 md:px-20 sm:px-14 itm px-8 md:py-16 sm:py-14 py-8 grid grid-cols-1 grid-rows-2 lg:grid-rows-1 lg:grid-cols-2 justify-items-center">
+            <div class="flex justify-around items-start flex-col">
+                <div>
+                    <h3 class="font-bold w-full md:w-96 mb-9 text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-[#1E0E62]">Great things begin in a small way</h3>
+                    <p class="text-gray-300 font-medium text-2xl sm:pr-30 pr-0 md:pr-72">We haven’t forgotten about responsive layout. With Startup Framework, you can create a website with full mobile support.</p>
+                </div>
+                <div>
+                    <button type="submit" class="h-11 px-5 bg-[#25DAC5] hover:bg-[#1ecbb7] text-white font-medium rounded-full">Explore Design</button>
+                    <button class="h-12 px-7 bg-transparent text-[#1E0E62] border-2 border-solid hover:text-[#25DAC5] hover:border-[#25DAC5] font-medium rounded-full">Learn More</button>
+                </div>
+            </div>
+            <div class="w-full sm:w-auto mt-10 sm:mt-0">
+                <figure>
+                    <img src="./public/img/header11.png" loading=lazy draggable="false" class="h-auto md:h-[40rem]" alt="Tablet">
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto justify-between bg-[#2F1893] flex-wrap flex xl:px-28 md:px-20 sm:px-14 itm px-8 md:py-16 sm:py-14 py-8">
+        <div class="text-white mb-9 md:mb-0">
+            <p class="font-bold mb-9 text-2xl">
+                Startup 3
+            </p>
+            <h2 class="font-bold w-full md:w-96 mb-12 text-2xl md:text-4xl lg:text-5xl xl:text-6xl">beautiful Startup Framework for Your Next Project</h2>
+            <p class="font-medium md:w-96 w-full pr-6 mb-12 text-2xl">A high-quality solution for those who want a bea-utiful startup website quickly</p>
+            <button class="px-5 font-medium block mx-auto sm:mx-0 text-xl py-2 rounded-full bg-[#25DAC5] hover:bg-[#1ecbb7] ">Download from App Store</button>
+        </div>
+        <figure >
+            <img src="./public/img/header12.png" draggable="false" class="h-auto md:h-[40rem]" alt="">
+        </figure>
+    </div>
+    <div class="w-full h-auto 2xl:h-screen">
+        <div class="bg-center bg-cover bg-no-repeat w-full h-full" style="background-image:linear-gradient(rgba(0, 0, 0, .2),rgba(0, 0, 0, .5)) , url(./public/img/header13.png);">
+            <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center text-white xl:px-28 justify-between">
+                <p class="font-bold text-2xl">
+                    Startup 3
+                </p>
+                <ul class="md:flex hidden text-white items-center">
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Home</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Features</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Pricing</a></li>
+                    <li><a href="#" class="font-medium text-lg px-5 hover:bg-white/[.2] rounded-md py-2">Blog</a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-lg py-2 bi-globe2"></i></a></li>
+                    <li><a href="#"><i class="bi font-medium px-5 text-2xl py-2 bi-behance"></i></a></li>
+                </ul>
+                <button type="button" class="border-2 border-white w-10 rounded-md text-2xl hover:bg-white/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+                <button class="rounded-full hidden md:block font-medium px-5 py-2 bg-indigo-500 hover:bg-indigo-600 ">Get Started</button>
+            </div>
+            <div class="text-center xl:px-96 lg:px-60 md:px-40 sm:px-20 px-8 text-white py-16">
+                <h1 class="font-bold mb-12 lg:px-20 px-0 text-2xl md:text-4xl lg:text-5xl xl:text-7xl">Create sites without routine</h1>
+                <p class="font-medium lg:px-28 px-0 mb-12 text-2xl">Startup gives you complete freedom over your creative process -- you don't have to think about any technical aspects. There are no limits and absolutely no coding</p>
+            </div>
+        </div>
+    </div>
+    <div  class="w-full bg-[#2F1893] h-auto">
+        <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center text-white xl:px-28 justify-between">
+            <p class="font-bold text-2xl">
+                Startup 3
+            </p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="px-5 py-2 text-white/[.5]">Overview</a></li>
+                <li><a href="#" class="px-5 py-2 hover:underline decoration-rose-500 hover:underline-offset-4">Prices</a></li>
+                <li><a href="#" class="px-5 py-2 hover:underline decoration-rose-500 hover:underline-offset-4">Blog</a></li>
+                <li><a href="#" class="px-5 py-2 hover:underline decoration-rose-500 hover:underline-offset-4">Feedback</a></li>
+                <li><button class="bg-rose-500 rounded-full hover:bg-rose-600 px-5 py-2 font-medium">Purchase</button></li>
+            </ul>
+        </div>
+        <div class="flex flex-wrap py-16 items-center justify-around px-10 lg:px-28">
+            <div class="text-white w-full md:w-[28rem]">
+                <h1 class="font-bold mb-12 text-2xl md:text-4xl lg:text-5xl xl:text-6xl">Generate Awesome Web Pages</h1>
+                <p class="font-medium md:pr-16 pr-0 mb-12 text-2xl">The most important part of tha Startup is the samples. The samples form a set fo 25 usable pages you can use as is or you can add new blocks</p>
+                <button class="px-5 py-2 rounded-full bg-rose-500 hover:bg-rose-600 font-medium text-lg">Learn More</button>
+            </div>
+            <div class="md:w-[29rem] mt-9 lg:mt-0 w-full rounded-xl justify-around flex flex-col md:px-16 px-5 py-5 md:py-16 items-center bg-white h-[28rem] md:h-[35rem]">
+                <h2 class="text-[#1E0E62] sm:text-2xl text-xl md:text-4xl font-bold">Sign Up Now</h2>
+                <input type="email" autocomplete="email" placeholder="Your email" class="w-full h-11 rounded-full border-2 border-solid border-black/[.1] px-5 " name="email" id="">
+                <input type="password" placeholder="Your password" class="w-full h-11 rounded-full border-2 border-solid border-black/[.1] px-5 " name="email" id="">
+                <label for="checkheader14" class="text-gray-400 self-start font-medium relative text-sm md:text-base block pl-8 check-con"> I agree to the Terms os Services  
+                    <input type="checkbox" name="" id="checkheader14" class="check-14 absolute opacity-0  w-0 h-0">
+                    <span class="checked absolute w-5 h-5 top-0.5 left-0 bg-gray-200 rounded"></span>
+                </label>
+                <button class="w-full h-11 bg-indigo-600 hover:bg-indigo-700 rounded-full text-white font-medium">Sign in</button>
+                <div class="flex items-center">
+                    <div class="md:w-32 h-0.5 w-24 bg-gray-200"></div>
+                    <span class="text-gray-400 font-medium px-5">or</span>
+                    <div class="md:w-32 w-24 h-0.5 bg-gray-200"></div>
+                </div>
+                <button class="w-full h-11 rounded-full bg-sky-400 hover:bg-sky-500 text-white font-medium">Login Via Twitter</button>
+                <p class="text-gray-400 font-medium">Do you have an Account? <a href="#" class="text-[#25DAC5] hover:underline decoration-[#25DAC5] hover:underline-offset-2"> Sign in</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto">
+        <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-between">
+            <p class="font-bold text-[#1E0E62] text-2xl">
+                Startup 3
+            </p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="px-5 py-2 font-medium text-gray-400 hover:underline decoration-rose-500 hover:underline-offset-4">Tour</a></li>
+                <li><a href="#" class="px-5 py-2 font-medium text-gray-400 hover:underline decoration-rose-500 hover:underline-offset-4">Prices</a></li>
+                <li><a href="#" class="px-5 py-2 font-medium text-gray-400 hover:underline decoration-rose-500 hover:underline-offset-4">About</a></li>
+                <li><a href="#" class="px-5 py-2 font-medium text-gray-400 hover:underline decoration-rose-500 hover:underline-offset-4">F.A.Q</a></li>
+                <li><a href="#" class="px-5 py-2 font-medium text-gray-400 hover:underline decoration-rose-500 hover:underline-offset-4">Tour</a></li>
+            </ul>
+            <div class="hidden md:block">
+                <button class="text-[#25DAC5] font-medium bg-transparent px-5 py-2 hover:outline outline-1 outline-[#25DAC5] rounded-full ">Login</button>
+                <button class="text-white font-medium rounded-full px-5 py-2 bg-[#25DAC5] hover:bg-[#29Dbb9]">Sign Up</button>
+            </div>
+            <button type="button" class="border-2 border-rose-500 text-rose-500 w-10 rounded-md text-2xl hover:bg-rose-500/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="text-center py-16">
+            <div class="xl:px-96 lg:px-60 md:px-40 sm:px-20 px-8">
+                <h1 class="font-bold text-[#1E0E62] mb-12 text-2xl md:text-4xl lg:text-5xl xl:text-6xl">Built Your Own Site like a Lego Constructor</h1>
+                <p class="font-medium text-gray-400 xl:px-36 md:px-20 sm:px-16 px-8 text-lg">
+                    We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.
+                </p>
+                <button class="px-8 my-24 py-3 rounded-full bg-rose-500 hover:bg-rose-600 font-medium text-lg text-white">Create an Account</button>
+            </div>
+            <div class="grid xl:px-40 px-8 md:px-32 lg:divide-x-2 divide-y-2 lg:divide-y-0 grid-cols-1 lg:grid-cols-3">
+                <div class="md:pr-6 flex flex-col items-center py-5 lg:py-0">
+                    <figure class="mb-5">
+                        <img src="./public/img/header15Mask.png" draggable="false" loading=lazy alt="">
+                    </figure>
+                    <p class="font-medium text-lg text-gray-400">Startup Framework works on devices supporting Retina Display. Feel the clarity in each pixel. </p>
+                </div>
+                <div class="md:px-6 flex flex-col items-center py-5 lg:py-0">
+                    <figure class="mb-5">
+                        <img src="./public/img/header15Mask2.png" draggable="false" loading=lazy alt="">
+                    </figure>
+                    <p class="font-medium text-lg text-gray-400">There are a lot of different components that will help you create the perfect look and feel for your startup.</p>
+                </div>
+                <div class="md:pl-6 flex flex-col items-center pt-5 md:pt-0">
+                    <figure class="mb-5">
+                        <img src="./public/img/header15Mask3.png" draggable="false" loading=lazy alt="">
+                    </figure>
+                    <p class="font-medium text-lg text-gray-400">You can easly combine components in a variety ways for different design project it's easy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto lg:h-screen bg-center bg-blend-soft-light bg-cover bg-no-repeat" style="background-image: linear-gradient(#2F1893, #2F1893) , url(./public/img/header16.png);">
+        <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-between">
+            <div class="flex items-center">
+                <p class="font-bold text-white text-2xl">Startup 3</p>
+                <ul class="md:flex hidden items-center">
+                    <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Tour</a></li>
+                    <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Prices</a></li>
+                    <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">About</a></li>
+                    <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">F.A.Q</a></li>
+                    <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Support</a></li>
+                </ul>
+            </div>
+            <button class="font-medium text-md text-white bg-[#25DAC5] hidden md:block px-6 py-2.5 rounded-full hover:bg-[#29Dbb9]">Buy $38</button>
+        </div>
+        <div class="flex py-6 relative overflow-hidden px-6 lg:px-16 items-center xl:px-28 justify-between">
+            <div class="text-white w-full md:w-[34rem]">
+                <h1 class="font-bold text-white mb-12 text-2xl md:text-4xl lg:text-5xl xl:text-7xl">Suit Up Your Startup</h1>
+                <p class="font-medium text-lg lg:pr-40">We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.</p>
+                <div class="flex flex-wrap gap-7 sm:gap-0 mt-10 justify-around">
+                    <div class="text-white w-64">
+                        <figure class="mb-3">
+                            <img src="./public/img/fa-gears.png" loading=lazy draggable="false" alt="Settings">
+                        </figure>
+                        <h3 class="font-medium mb-3 text-xl">Based on Bootstrap 4</h3>
+                        <p>HTML layout is basoed on one of the most common and reliable framework - Bootstrap</p>
+                    </div>
+                    <div class="text-white w-64">
+                        <figure class="mb-3">
+                            <img src="./public/img/fa-html5.png" loading=lazy draggable="false" alt="Html5">
+                        </figure>
+                        <h3 class="font-medium mb-3 text-xl">HTML5 & CSS3</h3>
+                        <p>We used only timed-tested technologies for the best result</p>
+                    </div>
+                </div>
+            </div>
+            <figure>
+                <img class="hidden md:block absolute top-6 w-[45rem] xl:w-[55rem] -right-96" src="./public/img/macbookh17 (2).png" loading=lasy draggable="false" alt="">
+            </figure>
+        </div>
+    </div>
+    <div class="w-full bg-[#2F1893] h-auto">
+        <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-between">
+            <p class="font-bold text-white text-2xl">Startup 3</p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Tour</a></li>
+                <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Features</a></li>
+                <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Pricing</a></li>
+                <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4">Blog</a></li>
+                <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#" class="px-5 font-medium text-white hover:underline decoration-rose-500 hover:underline-offset-4"><i class="bi bi-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="py-6 px-6 flex md:py-12 lg:px-16 items-between flex-col xl:px-28">
+            <div class="flex mb-10 flex-wrap justify-center items-center md:justify-between">
+                <div class="xl:w-[46rem] w-full md:w-[32rem] ">
+                    <h3 class="xl:text-5xl lg:text-4xl mb-10 md:text-3xl text-2xl text-white font-bold">Simple design & prototyping</h3>
+                    <p class="text-white/[.5] font-medium text-2xl">Startup Framewrok gives you complete freedom over your creative process -- you don't have to think abour any technical aspects.</p>
+                </div>
+                <div class="text-center mt-5 md:mt-0">
+                    <button class="px-14 py-4 bg-[#25DAC5] rounded-full mb-5 text-white text-lg font-medium">Get Started</button>
+                    <p class="text-white/[.5] font-medium">It is absolutely free</p>
+                </div>
+            </div>
+            <div class="w-full rounded-xl flex justify-center items-center h-96 lg:h-[32rem] bg-center bg-cover bg-no-repeat " style="background-image: url(./public/img/header17.png);">
+                <div class="w-14 h-14 bg-orange-600 cursor-pointer rounded-full text-white text-3xl flex justify-center items-center"><i class="bi bi-caret-right-fill"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-cover bg-center bg-no-repeat bg-blend-soft-light w-full h-screen" style="background-image: linear-gradient(#2F1893, #2F1893) , url(./public/img/header18.png);">
+        <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-between">
+            <p class="font-bold text-white text-2xl">Startup 3</p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="font-medium text-white px-5 text-md hover:underline underline-offset-4 hover:decoration-rose-500">Get App</a></li>
+                <li><a href="#" class="font-medium text-white px-5 text-md hover:underline underline-offset-4 hover:decoration-rose-500">Features</a></li>
+                <li><a href="#" class="font-medium text-white px-5 text-md hover:underline underline-offset-4 hover:decoration-rose-500">About</a></li>
+                <li><a href="#" class="font-medium text-white px-5 text-md hover:underline underline-offset-4 hover:decoration-rose-500">F.A.Q</a></li>
+                <li><button class="text-white px-5 font-medium">Sign in</button></li>
+                <li><button class="px-5 font-medium py-2 bg-white rounded-full text-indigo-500 hover:text-indigo-600">Sign Up</button></li>
+            </ul>
+        </div>
+        <div class="py-6 px-6 lg:px-16 xl:px-28">
+            <div class="w-full lg:w-[37rem]">
+                <h1 class="xl:text-7xl mb-10 lg:text-6xl md:text-5xl sm:text-3xl text-2xl text-white font-bold ">Startup Framework. Suit Up Your Startup</h1>
+                <p class="text-white font-medium text-2xl">We have created a new product that will help designers, developers and companies create websites for their startups quickly and easly</p>
+                <div class="mt-10">
+                    <button class="px-12 md:mr-5 mb-5 md:mb-0 mx-auto md:mx-0 block md:inline-block font-medium py-3 bg-white rounded-full text-indigo-500 hover:text-indigo-600">Get Started</button>
+                    <button class="text-white hover:bg-white hover:text-indigo-500 px-12 py-3 hover:outline-white outline outline-2 mx-auto md:mx-0 block md:inline-block outline-white/[.5] rounded-full bg-transparent">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-auto 2xl:h-screen">
+        <div class="flex flex-col items-center gap-7 py-6 px-6 md:py-8 lg:px-16 xl:px-28">
+            <div class="flex w-full justify-between md:justify-center">
+                <p class="text-violet-900 text-2xl font-bold ">Startup 3</p>
+                <button type="button" class="border-2 border-indido-500 text-indigo-500 w-10 rounded-md text-2xl hover:bg-indigo-500/[.2] md:hidden border-solid "><i class="bi bi-list"></i></button>
+            </div>
+            <ul class="md:flex hidden">
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400 hover:bg-violet-100 rounded-md ">Home</a></li>
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400 hover:bg-violet-100 rounded-md ">Features</a></li>
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400 hover:bg-violet-100 rounded-md ">About</a></li>
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400 hover:bg-violet-100 rounded-md ">Blog</a></li>
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400 hover:bg-violet-100 rounded-md ">Contacts Us</a></li>
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400"><i class="bi bi-x-circle-fill"></i></a></li>
+                <li><a href="#" class="font-medium px-5 py-2 text-md text-gray-400"><i class="bi bi-apple"></i></a></li>
+            </ul>
+        </div>
+        <div class="w-full relative h-auto flex-wrap py-6 px-6 md:py-8 flex justify-around lg:px-16 xl:px-28">
+            <div class="md:w-[29rem] w-full flex flex-col justify-around items-start">
+                <div>
+                    <h1 class=" text-[#1E0E62] mb-10 lg:text-6xl md:text-5xl sm:text-3xl text-2xl  font-bold">The best Apple Watch apps</h1>
+                    <p class="text-gray-400 font-medium mb-10 lg:mb-0 text-xl lg:pr-10">Startup Framewrok gives you complete freedom over your creative process -- you don't have to think about any technical aspects. There are no limits and absolutly no coding</p>
+                </div>
+                <button class="px-5 py-2 bg-indigo-500 mb-10 md:mb-0 block mx-auto lg:mx-0 hover:bg-indigo-600 text-white font-medium rounded-full">Download from App Store</button>
+            </div>
+            <figure>
+                <img src="./public/img/appleWatch.png" alt="Apple Watch!">
+            </figure>
+            <div class="lg:flex hidden flex-col absolute top-1/3 left-8 xl:left-[7%] w-5 justify-between items-center h-20">
+                <label for="dot1" class="pl-4 relative mb-6">
+                    <input type="radio" name="sectionDots" checked id="dot1" class="sectionDots opacity-0 absolute w-0 h-0">
+                    <span class="checkedDots w-4 h-4 top-0 left-0 absolute border-2 border-gray-300 border-solid rounded-full"></span>
+                </label>
+                <label for="dot2" class="pl-4 relative mb-6">
+                    <input type="radio" name="sectionDots" class="sectionDots opacity-0 absolute w-0 h-0" id="dot2">
+                    <span class="checkedDots w-4 h-4 top-0 left-0 absolute border-2 border-gray-300 border-solid rounded-full"></span>
+                </label>
+                <label for="dot3" class="pl-4 relative mb-6">
+                    <input type="radio" name="sectionDots" class="sectionDots opacity-0 absolute w-0 h-0" id="dot3">
+                    <span class="checkedDots w-4 h-4 top-0 left-0 absolute border-2 border-gray-300 border-solid rounded-full"></span>
+                </label>
+                <label for="dot4" class="pl-4 relative mb-6">
+                    <input type="radio" name="sectionDots" class="sectionDots opacity-0 absolute w-0 h-0" id="dot4">
+                    <span class="checkedDots w-4 h-4 top-0 left-0 absolute border-2 border-gray-300 border-solid rounded-full"></span>
+                </label>
+                <label for="dot5" class="pl-4 relative mb-6">
+                    <input type="radio" name="sectionDots" class="sectionDots opacity-0 absolute w-0 h-0" id="dot5">
+                    <span class="checkedDots w-4 h-4 top-0 left-0 absolute border-2 border-gray-300 border-solid rounded-full"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="w-full bg-[#2F1893] relative h-auto py-6 px-6 md:py-8 flex-col flex lg:px-16 xl:px-28 " >
+        <div class="flex justify-end">
+            <button type="button" class="text-white w-10 text-2xl"><i class="bi bi-list"></i></button>
+        </div>
+        <div class="flex flex-wrap justify-around w-full">
+            <figure class="md:order-none order-1 mt-9">
+                <img class="w-52 lg:w-60 xl:w-96" src="./public/img/header20.png" alt="Iphone">
+            </figure>
+            <div class="flex flex-col justify-around text-white items-start xl:pr-56 lg:pr-44 md:pr-32 sm:pr-20 pr-0 w-full md:w-[40rem] ">
+                <p class="font-bold text-2xl">Startup 3</p>
+                <div class="my-10 md:my-0">
+                    <h3 class="xl:text-7xl lg:text-4xl mb-10 md:text-3xl text-2xl font-bold">Let's make design fast and easy</h3>
+                    <p class=" font-medium text-2xl">The most important part of the Startup Framework is the samples. The samples form a set of 25 usable pages you can use as is or you can add blocks form UI Kit.</p>
+                </div>
+                <button class="px-8 py-3 rounded-full bg-[#25DAC5] block mx-auto md:mx-0 font-medium">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg-center bg-cover bg-no-repeat bg-blend-soft-light w-full h-screen" style="background-image:linear-gradient(#2F1893,#2F1893), url(./public/img/header21.png);">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <p class="font-bold text-white text-2xl">
+                Startup 3
+            </p>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="pr-5 pl-11 text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">Get App</a></li>
+                <li><a href="#" class="px-2 lg:px-5 text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">Features</a></li>
+                <li><a href="#" class="px-2 lg:px-5 text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">About</a></li>
+                <li><a href="#" class="px-2 lg:px-5 text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">F.A.Q</a></li>
+            </ul>
+            <div class="hidden md:block">
+                <button class="border-2 mr-5 border-solid hover:bg-white hover:text-indigo-600 border-white/[.5] text-white font-medium rounded-full px-5 py-2">Sign In</button>
+                <button class="bg-indigo-500 rounded-full px-5 py-2 hover:bg-indigo-700 text-white font-medium ">Sign Up</button>
+            </div>
+            <button type="button" class="border-2 border-white w-10 rounded-md text-2xl hover:bg-white/[.2] text-white md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="text-white 2xl:px-80 xl:px-72 lg:px-60 md:px-32 sm:px-16 px-6 py-6 flex flex-col items-center">
+            <h3 class="xl:text-7xl lg:text-4xl text-center md:text-3xl text-2xl px-0 md:px-16 font-bold">Startup 3. Suit Up Your Startup</h3>
+            <div class="w-14 h-14 bg-orange-600 cursor-pointer my-20 rounded-full text-white text-3xl flex justify-center items-center"><i class="bi bi-caret-right-fill"></i></div>
+            <div class="grid gap-10 md:gap-16 xl:gap-20 grid-cols-1 grid-rows-2 md:grid-rows-1 md:grid-cols-2">
+                <div>
+                    <h3 class="text-xl font-medium">Drag and Drop Generator</h3>
+                    <p class="text-white/[.5] text-lg">Build your site quickly with an intuitive and easy-to-use drag and drop interface.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-medium">Share & Export to HTML</h3>
+                    <p class="text-white/[.5] text-lg">Save time and energy by showing a developer about how things.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-center bg-blend-soft-light bg-cover bg-no-repeat w-full h-auto lg:h-screen" style="background-image:linear-gradient(#2e1893ad,#2e1893a4), url(./public/img/header22.png);">
+        <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
+            <ul class="flex items-center">
+                <li><p class="font-bold text-white px-5 text-2xl">Startup 3</p></li>
+                <li><a href="#" class="px-5 md:inline-flex hidden text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">Get App</a></li>
+                <li><a href="#" class="px-2 lg:px-5 md:inline-flex hidden text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">Features</a></li>
+                <li><a href="#" class="px-2 lg:px-5 md:inline-flex hidden text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">About</a></li>
+                <li><a href="#" class="px-2 lg:px-5 lg:inline-flex hidden text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">F.A.Q</a></li>
+            </ul>
+            <ul class="md:flex hidden items-center">
+                <li><a href="#" class="px-2 lg:px-5 text-white font-medium hover:underline hover:decoration-white hover:underline-offset-4">Help</a></li>
+                <li><button class="bg-transparent rounded-full px-5 py-2 mr-5 hover:outline outline-2 outline-white text-white font-medium">Login</button></li>
+                <li><button class="bg-transparent text-white font-medium px-5 hover:bg-rose-500 hover:border-rose-500 py-2 border-solid border-white/[.5] rounded-full border-2 ">Sign Up</button></li>
+            </ul>
+            <button type="button" class="border-2 border-white w-10 rounded-md text-2xl hover:bg-white/[.2] text-white md:hidden border-solid "><i class="bi bi-list"></i></button>
+        </div>
+        <div class="xl:px-52 py-6 lg:px-40 md:px-20 sm:px-14 px-6">
+            <div class="flex flex-col mb-14 text-white">
+                <h1 class="xl:text-7xl lg:text-4xl mb-10 text-center md:text-3xl text-2xl px-0 md:px-16 font-bold">The Amazing Hubble</h1>
+                <p class="text-2xl font-medium lg:px-36 px-0 text-center">The first area of specialization in telescopes has to do with the types of telescopes people use. The three designs of telescopes that most people use are the Refractor</p>
+            </div>
+            <div class="text-white gap-7 flex-wrap flex">
+                <input type="text" placeholder="Your Name" class="flex-auto  h-14 border-2 border-white/[.5] border-solid rounded-full px-5 bg-transparent ">
+                <input type="email" name="" id="" class="flex-auto basis-full sm:basis-auto  h-14 border-2 border-white/[.5] border-solid rounded-full px-5 bg-transparent " placeholder="Your email">
+                <button class="rounded-full flex-auto xl:max-w-[220px] px-6 py-2.5 text-xl font-medium bg-rose-500">Get Started</button>
+            </div>
+            <div class="flex mt-16 items-center flex-col text-white">
+                <h3 class="font-medium">OR SIGN UP WITH</h3>
+                <div class="flex gap-5 mt-5">
+                    <button class="w-12 hover:text-rose-500 hover:bg-white transition-colors h-12 rounded-full border-2 border-white/[.6] border-solid">
+                        <i class="bi text-2xl bi-twitter"></i>
+                    </button>
+                    <button class="w-12 hover:text-rose-500 hover:bg-white transition-colors h-12 rounded-full border-2 border-white/[.6] border-solid">
+                        <i class="bi text-2xl bi-facebook"></i>
+                    </button>
+                    <button class="w-12 hover:text-rose-500 hover:bg-white transition-colors h-12 rounded-full border-2 border-white/[.6] border-solid">
+                        <i class="bi text-2xl bi-google"></i>
+                    </button>
+                    <button class="w-12 hover:text-rose-500 hover:bg-white transition-colors h-12 rounded-full border-2 border-white/[.6] border-solid">
+                        <i class="bi text-2xl bi-github"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/js/startup.js"></script>
+</body>
+</html>

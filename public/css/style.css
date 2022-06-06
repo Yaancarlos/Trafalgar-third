@@ -1,0 +1,26 @@
+.mySlides:hover > a{
+    display: block !important;
+}
+
+.checked::before {
+    content: "✓";
+    position: absolute;
+    display: none;
+    color: #212529;
+    font-weight: 700;
+    top: -3px;
+    left: 4px;
+}
+
+.check-14:checked ~ .checked::before {
+    display: block;
+}
+
+.check-14:checked ~ .checked{
+    background: #25DAC5;
+}
+
+.sectionDots:checked ~ .checkedDots {
+    background-color: rgba(233, 58, 125, 1);
+    border: 2px solid rgba(233, 58, 125, 1);
+}
