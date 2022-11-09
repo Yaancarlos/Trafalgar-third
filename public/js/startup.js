@@ -30,3 +30,7 @@ function showSlides(n) {
   }
   slides[carousel-1].style.display = "block";  
 }
+
+function showMenu(a) {
+  document.getElementById(`show_product-${a}`).classList.toggle("hidden")
+}

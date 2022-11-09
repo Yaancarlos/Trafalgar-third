@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="./public/img/figmalogo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="w-full h-auto xl:h-screen">
+    <div class="w-full h-auto 2xl:h-screen">
         <div id="myOverlay" class="overlay w-full h-screen hidden fixed z-10 top-0 left-0 bg-black/[.7]">
             <span class="closebtn absolute top-5 right-5 text-3xl cursor-pointer text-white" onclick="closeSearch()" title="Close Overlay"><i class="bi bi-x-circle"></i></span>
             <div class="overlay-content px-6 md:px-0 relative translate-y-4 md:translate-y-0 top-16">
@@ -75,7 +75,7 @@
         </div>
     </div>
     <div class="bg-gray-200 w-full h-14"></div>
-    <div class="bg-[#2F1893] w-full h-auto xl:h-screen">
+    <div class="bg-[#2F1893] w-full h-auto 2xl:h-screen">
         <div class="flex py-6 px-6 md:py-12 md:px-16 lg:px-28 justify-between text-white">
             <p class="font-bold text-2xl">
                 Startup 3
@@ -104,14 +104,21 @@
         </div>
     </div>
     <div class="bg-gray-200 w-full h-14"></div>
-    <div class="w-full h-auto xl:h-screen">
+    <div class="w-full h-auto 2xl:h-screen">
         <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
             <div class="flex text-[#1E0E62]">
                 <p class="font-bold text-2xl">
                 Startup 3
                 </p>
                 <ul class="md:flex hidden items-center">
-                    <li><a href="#" class="pr-5 pl-11 text-gray-400 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Products <i class="bi bi-chevron-down"></i></a></li>
+                    <ul class="relative">
+                        <li><button onclick="showMenu(1)" class="pr-5 pl-11 text-gray-400 font-medium hover:underline-offset-4">Products <i class="bi bi-chevron-down"></i></button></li>
+                        <ul class="absolute hidden top-full shadow-md rounded-lg py-3 text-center w-full bg-white z-10 left-0" id="show_product-1">
+                            <li><a href="#" class="hover:text-violet-900">Item 1<a></li>
+                            <li><a href="#" class="hover:text-violet-900">Item 2<a></li>
+                            <li><a href="#" class="hover:text-violet-900">Item 3<a></li>
+                        </ul>
+                    </ul>
                     <li><a href="#" class="px-2 lg:px-5 text-gray-400 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Pricing</a></li>
                     <li><a href="#" class="px-2 lg:px-5 text-gray-400 font-medium hover:underline hover:decoration-emerald-300 hover:underline-offset-4">Community</a></li>
                 </ul>
@@ -213,9 +220,16 @@
  --><div class="w-full h-screen bg-center bg-blend-soft-light bg-cover opacity-70" style="background-image: linear-gradient(#2F1893,#2F1893), url(./public/img/header6.png);">
         <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
             <ul class="md:flex hidden text-white">
-                <li><Products href="#" class="font-medium px-2 sm:px-5 cursor-pointer hover:underline decoration-emerald-300 hover:underline-offset-4">Products</a></li>
-                <li><Pricing href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-emerald-300 hover:underline-offset-4">Pricing</a></li>
-                <li><Community href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-emerald-300 hover:underline-offset-4">Community</a></li>
+                <ul class="relative">
+                    <li><button onclick="showMenu(2)" class="font-medium px-2 sm:px-5 cursor-pointer">Products</button></li>
+                    <ul class="absolute hidden text-black text-center left-0 w-full bg-white rounded-lg shadow-md py-3 top-full" id="show_product-2">
+                        <li class="hover:bg-gray-50"><a href="#">Item 1</a></li>
+                        <li class="hover:bg-gray-50"><a href="#">Item 2</a></li>
+                        <li class="hover:bg-gray-50"><a href="#">Item 3</a></li>
+                    </ul>
+                </ul>
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-emerald-300 hover:underline-offset-4">Pricing</a></li>
+                <li><a href="#" class="font-medium px-2 sm:px-5 hover:underline decoration-emerald-300 hover:underline-offset-4">Community</a></li>
             </ul>
             <p class="font-bold text-white text-2xl">
                 Startup 3
@@ -261,7 +275,7 @@
         <div class="bg-center hidden lg:block bg-cover bg-no-repeat w-[36rem] h-full" style="background-image: url(./public/img/header7.png);"></div>
     </div>
     <div class="bg-gray-200 w-full h-14"></div>
-    <div class="w-full h-auto md:h-screen">
+    <div class="w-full h-auto lg:h-screen">
         <div class="bg-center relative bg-cover bg-no-repeat w-full mySlides h-full" style="background-image: linear-gradient(rgba(0, 102, 255, 0.227),rgba(0, 149, 255, 0.227)), url(./public/img/mountain1.webp);">
             <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-center">
                 <ul class="sm:flex hidden text-white items-center">
@@ -336,7 +350,7 @@
         </div>
     </div>
     <div class="bg-gray-200 w-full h-14"></div>
-    <div class="w-full h-auto xl:h-screen">
+    <div class="w-full h-auto 2xl:h-screen">
         <div class="flex py-6 px-6 md:py-12 md:px-16 items-center lg:px-28 justify-between">
             <p class="font-bold text-2xl">
             Startup 3
@@ -566,7 +580,7 @@
         </div>
     </div>
     <div class="bg-gray-200 w-full h-14"></div>
-    <div class="w-full h-auto lg:h-screen bg-center bg-blend-soft-light bg-cover bg-no-repeat" style="background-image: linear-gradient(#2F1893, #2F1893) , url(./public/img/header16.png);">
+    <div class="w-full h-auto xl:h-screen bg-center bg-blend-soft-light bg-cover bg-no-repeat" style="background-image: linear-gradient(#2F1893, #2F1893) , url(./public/img/header16.png);">
         <div class="flex py-6 px-6 md:py-12 lg:px-16 items-center xl:px-28 justify-between">
             <div class="flex items-center">
                 <p class="font-bold text-white text-2xl">Startup 3</p>
